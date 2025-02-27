@@ -1,11 +1,20 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 
 import { PricingButton } from '@/components/PricingButton'
 import { PricingCard } from '@/components/PricingCard'
 
+import { findPricingPlanById } from '@/utils/functions'
 import { pricingData } from '@/utils/pricingData'
+import { PricingPlan } from '@/utils/types'
 
 export const Pricing = () => {
+  const [selectedPricingId, setSelectedPricingId] = useState<string>('2')
+
+  const selectedPricing = findPricingPlanById({ id: selectedPricingId })
+
   return (
     <section className="mt-14">
       <Image
@@ -13,29 +22,56 @@ export const Pricing = () => {
         alt="wave-top"
         width={0}
         height={0}
-        className="w-full"
+        className="-mb-[1px] w-full"
       />
       <div className="bg-pricing-green text-pure-white flex flex-col items-center justify-center py-10">
         <p className="text-4xl font-bold">{'Choose your plan'}</p>
-        <div className="flex w-full flex-row items-center justify-center gap-4">
-          <PricingCard data={pricingData[0]} />
+        <div className="my-14 flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:items-end">
+          {pricingData.map((data) => {
+            return (
+              <PricingCard
+                data={data}
+                onSelect={setSelectedPricingId}
+                selected={data.id === selectedPricingId}
+                key={data.id}
+              />
+            )
+          })}
         </div>
-        <p className="text-sm">
+        <p className="text-center text-sm">
           {
             'By selecting a payment method, you agree to the Terms & Conditions and Privacy Policy.'
           }
         </p>
         <PricingButton content="GET MY PLAN" />
         <p className="max-w-[672px] text-center text-xs">
-          {'You are enrolling in 1 Month Plan subscription to'}
+          {`You are enrolling in ${selectedPricing?.durationInMonths} Month Plan subscription to`}
           <br />{' '}
-          {
-            'https://shiftmind.app/ service with the discount price $29.99. You agree that the plan you selected will automatically be extended at the full price for successive renewal periods and you will be charged $59.98 every 1 months until you cancel the subscription. Payments will be charged from the card you specified here. You can cancel your subscription by contacting our customer support team via email at hello@shiftmind.app. Terms of Service the charge will appear on your bill as “ShiftMind”.'
-          }
+          {`https://shiftmind.app/ service with the discount price $${selectedPricing?.pricePerMonth}. You agree that the plan you selected will automatically be extended at the full price for successive renewal periods and you will be charged $${selectedPricing?.previousPerMonth} every ${selectedPricing?.durationInMonths} months until you cancel the subscription. Payments will be charged from the card you specified here. You can cancel your subscription by contacting our customer support team via email at hello@shiftmind.app. Terms of Service the charge will appear on your bill as “ShiftMind”.`}
         </p>
-        <div>
-          <p></p>
-          <div></div>
+        <div className="mt-8 flex w-full max-w-[672px] flex-col items-center justify-between gap-6 lg:flex-row lg:gap-0">
+          <div className="flex max-w-[371px] flex-row items-center">
+            <Image
+              src={'/guarantee.svg'}
+              alt="guarantee"
+              width={52}
+              height={52}
+            />
+            <div className="text-pure-white pl-4 leading-none">
+              <span className="text-xl leading-none font-extrabold">
+                RISK-FREE GUARANTEE
+              </span>{' '}
+              <span className="text-sm">
+                cancel at any time without being charged the full price
+              </span>
+            </div>
+          </div>
+          <Image
+            src={'/payment-methods.svg'}
+            alt="paymentMethods"
+            width={261}
+            height={38}
+          />
         </div>
       </div>
       <Image
@@ -43,7 +79,7 @@ export const Pricing = () => {
         alt="wave-bottom"
         width={0}
         height={0}
-        className="h-full w-full"
+        className="-mt-[1px] w-full"
       />
     </section>
   )

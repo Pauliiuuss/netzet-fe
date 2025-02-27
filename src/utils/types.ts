@@ -5,6 +5,7 @@ export type Summary = {
 }
 
 export type PricingPlan = {
+  id: string
   durationInMonths: number
   pricePerDay: number
   pricePerMonth: number

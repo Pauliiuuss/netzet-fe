@@ -6,7 +6,7 @@ import { Summary } from '@/sections/Summary'
 
 export default function Home() {
   return (
-    <div className="from-white-gradient to-gray-gradient bg-gradient-to-r">
+    <div className="from-white-gradient to-gray-gradient flex flex-col bg-gradient-to-r">
       <PromotionBar />
       <Header />
       <Summary />
