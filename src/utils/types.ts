@@ -13,3 +13,10 @@ export type PricingPlan = {
   previousPerMonth: number
   topChoice: boolean
 }
+
+export type Goal = {
+  image: string
+  title: string
+  points: string[]
+  type: 'positive' | 'negative'
+}
