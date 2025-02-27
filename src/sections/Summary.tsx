@@ -15,14 +15,16 @@ export const Summary = () => {
           return <SummaryCard key={data.title} data={data} />
         })}
       </div>
-      <div className="bg-dark-green mt-6 h-full max-h-[440px] w-full max-w-[640px] rounded-3xl p-10">
-        <Image
-          src="/graph.svg"
-          alt="graph"
-          width={0}
-          height={0}
-          className="h-full w-full"
-        />
+      <div className="from-pink-default via-lilac-default to-blue-default mt-6 inline-block rounded-3xl bg-gradient-to-r p-[1px]">
+        <div className="bg-dark-green h-full max-h-[440px] w-full max-w-[640px] rounded-3xl p-10">
+          <Image
+            src="/graph.svg"
+            alt="graph"
+            width={0}
+            height={0}
+            className="h-full w-full"
+          />
+        </div>
       </div>
     </section>
   )
