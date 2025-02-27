@@ -1,5 +1,22 @@
+'use client'
+
+import { PromoButton } from './PromoButton'
+import { Timer } from './Timer'
+
 export const PromotionBar = () => {
-    return (
-        <></>
-    )
+  const expirationDate = new Date(Date.now() + 864000)
+
+  // Norint dienas prideti neskaiciuojant ms ---------
+  // const promotionExpirationDate = new Date()
+  // promotionExpirationDate.setDate(promotionExpirationDate.getDate() + 1)
+
+  return (
+    <div className="bg-dark-green text-pure-white flex h-20 w-full items-center justify-center gap-9">
+      <div className="flex items-center gap-4">
+        <p className="text-lg">{'This offer expires in'}</p>
+        <Timer expirationDate={expirationDate} />
+      </div>
+      <PromoButton content="GET MY PLAN" />
+    </div>
+  )
 }

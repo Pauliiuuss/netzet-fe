@@ -1,3 +1,16 @@
+import { PromotionBar } from '@/components/PromotionBar'
+
+import { Header } from '@/sections/Header'
+import { Pricing } from '@/sections/Pricing'
+import { Summary } from '@/sections/Summary'
+
 export default function Home() {
-  return <p className="text-4xl text-green-700 text-center flex-row">LABAS</p>
+  return (
+    <div className="from-white-gradient to-gray-gradient bg-gradient-to-r">
+      <PromotionBar />
+      <Header />
+      <Summary />
+      <Pricing />
+    </div>
+  )
 }
