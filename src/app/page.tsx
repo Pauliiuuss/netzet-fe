@@ -3,6 +3,7 @@ import { PromotionBar } from '@/components/PromotionBar'
 import { Goals } from '@/sections/Goals'
 import { Header } from '@/sections/Header'
 import { Pricing } from '@/sections/Pricing'
+import { Statistics } from '@/sections/Statistics'
 import { Summary } from '@/sections/Summary'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Summary />
       <Pricing />
       <Goals />
+      <Statistics />
     </div>
   )
 }
