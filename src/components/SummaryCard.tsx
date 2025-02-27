@@ -9,8 +9,18 @@ export const SummaryCard = ({ data }: { data: Summary }) => {
     'text-blue-default': data.stage === 'moderate',
   }
 
+  const borders = {
+    'border-1 border-pink-default': data.stage === 'high',
+    'border-1 border-blue-default': data.stage === 'moderate',
+  }
+
   return (
-    <div className="bg-dark-green text-pure-white flex max-w-[472px] flex-col gap-6 rounded-3xl px-10 py-6">
+    <div
+      className={classNames(
+        'bg-dark-green text-pure-white flex max-w-[472px] flex-col gap-6 rounded-3xl px-10 py-6',
+        borders
+      )}
+    >
       <div className="flex flex-col gap-2">
         <p className="text-2xl font-bold">{data.title}</p>
         <p className={classNames('text-xl font-extrabold', stageColor)}>
