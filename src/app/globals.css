@@ -1,3 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-dark-green: #134a47;
+  --color-pricing-green: #0c3f3d;
+  --color-text-dark-green: #0a3634;
+  --color-light-green: #327b7b;
+  --color-header-green: #1e6864;
+  --color-pure-white: #ffffff;
+  --color-blue-border: #5a91ff;
+
+  --color-pink-default: #f175b9;
+  --color-lilac-default: #8089ff;
+  --color-blue-default: #3df7ff;
+
+  /*BG GRADIENT*/
+  --color-gray-gradient: #d7eeeb;
+  --color-white-gradient: #ffffff;
+}
