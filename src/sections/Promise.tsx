@@ -10,10 +10,10 @@ export const Promise = () => {
               {'Our promise'}
             </p>
             <p className="text-text-dark-green leading-6 lg:text-xl">
-              "We know how you feel. You're constantly fighting procrastination,
-              and{' '}
+              &#34;We know how you feel. You&#39;re constantly fighting
+              procrastination, and{' '}
               <span className="font-extrabold">
-                it seems like there's no way to win.
+                it seems like there&#39;s no way to win.
               </span>{' '}
               Sometimes you see a glimmer of hope, only to{' '}
               <span className="font-extrabold">
@@ -36,8 +36,8 @@ export const Promise = () => {
               <br />
               Having helped thousands of procrastinators we’ve learned that the
               procrastinator’s problems run deep and overcoming procrastination
-              is not merely just a matter of "getting your act together" and
-              "sticking to it".
+              is not merely just a matter of &#34;getting your act together&#34;
+              and &#34;sticking to it&#34;.
               <br />
               <br />
               <span className="font-extrabold">
@@ -46,14 +46,14 @@ export const Promise = () => {
               </span>
               <br />
               <br />
-              That's why there's no one-size-fits-all solution to
+              That&#39;s why there&#39;s no one-size-fits-all solution to
               procrastination. You need to find the right strategy for you - and
-              that's where we come in.
+              that&#39;s where we come in.
               <br />
               <br />
               Together,{' '}
               <span className="font-extrabold">
-                we'll help you find the root cause of your procrastination
+                we&#39;ll help you find the root cause of your procrastination
               </span>{' '}
               and design a personalized plan to overcome it based on the latest
               psychological research.

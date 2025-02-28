@@ -9,6 +9,10 @@
   --color-pure-white: #ffffff;
   --color-blue-border: #5a91ff;
   --color-light-blue: #00fbff;
+  --color-light-gray: #a8c6c4;
+  --color-checkout-stepper: #0e7a82;
+  --color-checkout-stepper-off: #ece9e3;
+  --color-seethrough-black: rgba(0, 0, 0, 0.6);
 
   --color-pink-default: #f175b9;
   --color-lilac-default: #8089ff;

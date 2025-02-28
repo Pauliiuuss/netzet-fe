@@ -15,11 +15,13 @@ export const PricingCard = ({
   onSelect: Dispatch<SetStateAction<string>>
 }) => {
   const topChoiceStyles = {
-    'h-[134px] border-2 border-blue-border bg-pure-white': data.topChoice,
-    'from-white-gradient to-gray-gradient bg-gradient-to-r': !data.topChoice,
+    'h-[134px] border-2 border-blue-border': data.topChoice,
+    'shadow-blue-border shadow-[0px_0px_10px] bg-pure-white':
+      selected && data.topChoice,
   }
 
   return (
+    /* Top choice top part */
     <div
       onClick={() => {
         onSelect(data.id)
@@ -30,29 +32,32 @@ export const PricingCard = ({
         selected && data.topChoice && 'shadow-blue-border shadow-[0px_0px_10px]'
       )}
     >
+      {/* Top choice text */}
       {data.topChoice && (
         <p className="text-sm leading-none font-bold">
           {'TOP CHOICE FOR BEGINNERS'}
         </p>
       )}
+      {/* Main card */}
       <div
         className={classNames(
           'text-text-dark-green mt-3 flex h-[118px] w-full max-w-[377px] min-w-[300px] flex-row items-center justify-between rounded-3xl px-4 py-6',
-          selected &&
-            !data.topChoice &&
-            'shadow-blue-border border-blue-border border-2 shadow-[0px_0px_10px]',
+          {
+            'shadow-blue-border ring-blue-border bg-pure-white shadow-[0px_0px_10px] ring-2':
+              selected && !data.topChoice,
+            'from-white-gradient to-gray-gradient bg-gradient-to-r': !selected,
+          },
           topChoiceStyles
         )}
       >
         <div className="flex flex-row gap-4">
           <input
             type="radio"
-            name="myRadioGroup"
             className="peer sr-only"
             checked={selected}
             readOnly
           />
-          <div className="bg-blue-border peer-checked:border-blue-border peer-checked:bg-pure-white h-5 w-5 rounded-full transition-colors peer-checked:border-[6px]"></div>
+          <div className="bg-light-gray peer-checked:border-blue-border peer-checked:bg-pure-white h-5 w-5 rounded-full transition-colors peer-checked:border-[6px]"></div>
           <div className="flex flex-col gap-2">
             <p className="text-xl leading-none font-bold">{`${data.durationInMonths}-month plan`}</p>
             <p className="text-xs">{`Billed every ${data.durationInMonths} month`}</p>

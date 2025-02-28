@@ -12,16 +12,16 @@ import { Testimonials } from '@/sections/Testimonials'
 
 export default function Home() {
   return (
-    <div className="from-white-gradient to-gray-gradient flex flex-col bg-gradient-to-r">
+    <div className="from-white-gradient to-gray-gradient relative flex flex-col bg-gradient-to-r">
       <PromotionBar />
       <Header />
       <Summary />
-      <Pricing />
+      <Pricing key={'1'} />
       <Goals />
       <Statistics />
       <Plan />
       <Testimonials />
-      <Pricing />
+      <Pricing key={'2'} />
       <Promise />
       <FAQ />
     </div>

@@ -11,7 +11,13 @@ export const Plan = () => {
         {'Your Procrastination plan will help you:'}
       </p>
       <div className="flex max-w-[964] flex-col-reverse items-center gap-[93px] lg:flex-row lg:items-stretch">
-        <Image src={'/brain.svg'} alt="brain" width={310} height={270} />
+        <Image
+          src={'/brain.svg'}
+          alt="brain"
+          width={0}
+          height={0}
+          className="h-[215px] w-[250px] lg:h-[270px] lg:w-[310px]"
+        />
         <div className="flex flex-row flex-wrap justify-center gap-[60px]">
           {planData.map((plan) => {
             return <PlanCard data={plan} key={plan.id} />

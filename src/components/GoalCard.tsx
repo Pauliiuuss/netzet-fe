@@ -24,12 +24,17 @@ export const GoalCard = ({ data }: { data: Goal }) => {
           className="w-full lg:h-[293px]"
         />
         <div className="lg:h-[293px]">
-          <p className={classNames('p-6 text-2xl font-bold', goalColor)}>
+          <p
+            className={classNames(
+              'p-4 text-lg leading-none font-bold lg:p-6 lg:text-2xl',
+              goalColor
+            )}
+          >
             {data.title}
           </p>
           <ul
             className={classNames(
-              'flex list-disc flex-col gap-4 pr-6 pb-6 pl-11 leading-none',
+              'flex list-disc flex-col gap-4 pr-6 pb-6 pl-9 leading-none lg:pl-11',
               markerColor
             )}
           >

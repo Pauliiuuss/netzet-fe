@@ -17,18 +17,26 @@ export const FAQData: FAQ[] = [
     id: '3',
     question: 'How can I make the most of the Anti-Procrastination Program?',
     answer:
+      // Double qoutes bcuz of apostrophe in the text. Eslint is angry.
+      // eslint-disable-next-line
       "Each day, you'll receive practical lessons to enhance your daily planning and break self-destructive patterns. Daily reflection, weekly and monthly result tracking, and gradual habit-building will keep you motivated, monitor your advancement, and guard against potential setbacks. Our aim is to guide you in exploring effective resources to kick procrastination to the curb and ensure your path to success.",
   },
   {
     id: '4',
+    // Double qoutes bcuz of apostrophe in the text. Eslint is angry.
+    // eslint-disable-next-line
     question: "What's the process after I make a purchase?",
     answer:
+      // Double qoutes bcuz of apostrophe in the text. Eslint is angry.
+      // eslint-disable-next-line
       "Once your purchase is complete, we'll kickstart the process! Shortly after, you'll receive an email containing a download link and straightforward instructions. The entire program hinges on the proven effectiveness of Cognitive Behavioral Therapy (CBT), a well-established approach.",
   },
   {
     id: '5',
     question: 'What is the pricing?',
     answer:
+      // Double qoutes bcuz of apostrophe in the text. Eslint is angry.
+      // eslint-disable-next-line
       "Our flexible payment options allow you to pick from a one-month, three-month, or six-month plan, granting you access to the app along with additional perks. And if you're not completely satisfied, don't worry! Our Risk-Free Guarantee enables you to cancel at any time without incurring the full price of the program.",
   },
 ]

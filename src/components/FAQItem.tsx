@@ -1,7 +1,6 @@
 'use client'
 
 import classNames from 'classnames'
-import Image from 'next/image'
 import { useState } from 'react'
 
 import { FAQ } from '@/utils/types'
@@ -33,7 +32,12 @@ export const FAQItem = ({ data }: { data: FAQ }) => {
         onClick={handleOpen}
       >
         <div className="flex items-center justify-between">
-          <h3 className="text-dark-green w-fit leading-none font-medium">
+          <h3
+            className={classNames('text-dark-green w-fit leading-none', {
+              'font-bold': isOpen,
+              'font-medium': !isOpen,
+            })}
+          >
             {data.question}
           </h3>
           <div
@@ -51,6 +55,7 @@ export const FAQItem = ({ data }: { data: FAQ }) => {
               className={classNames({
                 'text-pure-white mb-0.5 rotate-180 transition-transform duration-300':
                   isOpen,
+                'text-dark-green': !isOpen,
               })}
             >
               <path
