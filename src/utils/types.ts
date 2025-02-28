@@ -32,3 +32,12 @@ export type Plan = {
   wide: boolean
   textSegments: Segments[]
 }
+
+export type Testimonial = {
+  id: string
+  icon: string
+  name: string
+  age: string
+  location: string
+  text: string
+}
