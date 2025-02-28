@@ -11,9 +11,11 @@ export const PromotionBar = () => {
   // promotionExpirationDate.setDate(promotionExpirationDate.getDate() + 1)
 
   return (
-    <div className="bg-dark-green text-pure-white flex h-20 w-full items-center justify-center gap-9">
-      <div className="flex items-center gap-4">
-        <p className="text-lg">{'This offer expires in'}</p>
+    <div className="bg-dark-green text-pure-white flex h-20 w-full items-center justify-center gap-6 px-6 py-4 lg:gap-9 lg:p-0">
+      <div className="flex items-center gap-2 lg:gap-4">
+        <p className="text-base leading-none font-light lg:text-lg lg:font-medium">
+          {'This offer expires in'}
+        </p>
         <Timer expirationDate={expirationDate} />
       </div>
       <PromoButton content="GET MY PLAN" />

@@ -37,7 +37,7 @@ export const PricingCard = ({
       )}
       <div
         className={classNames(
-          'text-text-dark-green mt-3 flex h-[118px] w-full max-w-[377px] min-w-[342px] flex-row items-center justify-between rounded-3xl px-4 py-6',
+          'text-text-dark-green mt-3 flex h-[118px] w-full max-w-[377px] min-w-[300px] flex-row items-center justify-between rounded-3xl px-4 py-6',
           selected &&
             !data.topChoice &&
             'shadow-blue-border border-blue-border border-2 shadow-[0px_0px_10px]',
