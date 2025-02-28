@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Promise = () => {
   return (
-    <div className="mx-6 my-20 flex justify-center lg:mx-0">
+    <section className="mx-6 my-20 flex justify-center lg:mx-0">
       <div className="from-pink-default via-purple-default to-blue-default relative inline-block rounded-[40px] bg-gradient-to-r p-[2px]">
         <div className="bg-pure-white flex max-w-[790px] flex-col items-center rounded-[40px]">
           <div className="flex flex-col gap-6 px-6 pt-10 pb-2 lg:px-[58px]">
@@ -92,6 +92,6 @@ export const Promise = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

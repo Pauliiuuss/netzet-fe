@@ -1,5 +1,6 @@
 import { PromotionBar } from '@/components/PromotionBar'
 
+import { FAQ } from '@/sections/FAQ'
 import { Goals } from '@/sections/Goals'
 import { Header } from '@/sections/Header'
 import { Plan } from '@/sections/Plan'
@@ -22,6 +23,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <Promise />
+      <FAQ />
     </div>
   )
 }
