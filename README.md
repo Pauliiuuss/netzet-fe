@@ -1,4 +1,4 @@
-## NEXTJS | TS | TW | GQL | MUI template
+## NEXTJS | TS | TW | Netzet-FE Task
 
 Use pnpm to install dependencies and launch the application
 
