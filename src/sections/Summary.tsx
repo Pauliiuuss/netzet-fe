@@ -6,7 +6,7 @@ import { summaryData } from '@/utils/summaryData'
 
 export const Summary = () => {
   return (
-    <section className="mt-10 flex max-w-[960px] flex-col items-center self-center px-6 lg:px-0">
+    <section className="mt-10 mb-14 flex max-w-[960px] flex-col items-center self-center px-6 lg:px-0">
       <p className="text-text-dark-green mb-10 max-w-[560px] text-center text-[32px] leading-none font-bold lg:text-[40px]">
         {'Your Personal Procrastination Summary'}
       </p>

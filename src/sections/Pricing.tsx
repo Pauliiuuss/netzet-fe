@@ -16,7 +16,7 @@ export const Pricing = () => {
   const selectedPricing = findPricingPlanById({ id: selectedPricingId })
 
   return (
-    <section className="mt-14">
+    <section>
       <Image
         src="/price-wave-top.svg"
         alt="wave-top"

@@ -6,6 +6,7 @@ import { Plan } from '@/sections/Plan'
 import { Pricing } from '@/sections/Pricing'
 import { Statistics } from '@/sections/Statistics'
 import { Summary } from '@/sections/Summary'
+import { Testimonials } from '@/sections/Testimonials'
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Goals />
       <Statistics />
       <Plan />
+      <Testimonials />
+      <Pricing />
     </div>
   )
 }
