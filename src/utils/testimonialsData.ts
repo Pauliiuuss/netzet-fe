@@ -15,6 +15,8 @@ export const testimonialsData: Testimonial[] = [
     name: 'Julia W',
     age: '33',
     location: 'Albuquerque,\nNew Mexico',
+    // Double qoutes bcuz of apostrophe in the text. Eslint is angry.
+    // eslint-disable-next-line
     text: "“When I found ShiftMind, I was instantly hooked by its CBT-based daily lessons that helped me reframe my thoughts and overcome negative self-talk (my #1 procrastination trigger). \n\n Plus, since the program made me realize that I’m a Deadline-Driven Performer, I've revamped my diet, started exercising regularly, and my body has transformed!”",
   },
 ]

@@ -3,22 +3,27 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+import { CheckoutModal } from '@/components/CheckoutModal'
 import { PricingButton } from '@/components/PricingButton'
 import { PricingCard } from '@/components/PricingCard'
 
 import { findPricingPlanById } from '@/utils/functions'
 import { pricingData } from '@/utils/pricingData'
-import { PricingPlan } from '@/utils/types'
+import {
+  setSelectedPricingId,
+  useSelectedPricingId,
+} from '@/utils/pricingStore'
 
 export const Pricing = () => {
-  const [selectedPricingId, setSelectedPricingId] = useState<string>('2')
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const selectedPricingId = useSelectedPricingId()
 
   const selectedPricing = findPricingPlanById({ id: selectedPricingId })
 
   return (
-    <section>
+    <section id="pricing">
       <Image
-        src="/price-wave-top.svg"
+        src="/pricing/price-wave-top.svg"
         alt="wave-top"
         width={0}
         height={0}
@@ -31,7 +36,9 @@ export const Pricing = () => {
             return (
               <PricingCard
                 data={data}
-                onSelect={setSelectedPricingId}
+                onSelect={() => {
+                  setSelectedPricingId(data.id)
+                }}
                 selected={data.id === selectedPricingId}
                 key={data.id}
               />
@@ -43,7 +50,12 @@ export const Pricing = () => {
             'By selecting a payment method, you agree to the Terms & Conditions and Privacy Policy.'
           }
         </p>
-        <PricingButton content="GET MY PLAN" />
+        <PricingButton
+          content="GET MY PLAN"
+          onClick={() => {
+            setIsModalOpen(true)
+          }}
+        />
         <p className="max-w-[672px] text-center text-xs">
           {`You are enrolling in ${selectedPricing?.durationInMonths} Month Plan subscription to`}
           <br />{' '}
@@ -52,7 +64,7 @@ export const Pricing = () => {
         <div className="mt-8 flex w-full max-w-[672px] flex-col items-center justify-between gap-6 lg:flex-row lg:gap-0">
           <div className="flex max-w-[371px] flex-row items-center">
             <Image
-              src={'/guarantee.svg'}
+              src={'/pricing/guarantee.svg'}
               alt="guarantee"
               width={52}
               height={52}
@@ -67,7 +79,7 @@ export const Pricing = () => {
             </div>
           </div>
           <Image
-            src={'/payment-methods.svg'}
+            src={'/pricing/payment-methods.svg'}
             alt="paymentMethods"
             width={261}
             height={38}
@@ -75,12 +87,21 @@ export const Pricing = () => {
         </div>
       </div>
       <Image
-        src="/price-wave-bottom.svg"
+        src="/pricing/price-wave-bottom.svg"
         alt="wave-bottom"
         width={0}
         height={0}
         className="-mt-[1px] w-full"
       />
+      {selectedPricing && (
+        <CheckoutModal
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false)
+          }}
+          selectedPricing={selectedPricing}
+        />
+      )}
     </section>
   )
 }

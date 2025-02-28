@@ -30,7 +30,7 @@ export const SummaryCard = ({ data }: { data: Summary }) => {
       </div>
       <Image
         alt="scale"
-        src={`/${data.stage}.svg`}
+        src={`/summary/${data.stage}.svg`}
         width={0}
         height={0}
         className="w-full"

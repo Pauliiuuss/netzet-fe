@@ -15,7 +15,12 @@ export const TestimonialsCard = ({ data }: { data: Testimonial }) => {
             <p className="font-figtree text-xs leading-4 font-normal whitespace-pre-line italic">
               {data.location}
             </p>
-            <Image src={'/stars.svg'} alt="stars" width={86} height={14} />
+            <Image
+              src={'/testimonials/stars.svg'}
+              alt="stars"
+              width={86}
+              height={14}
+            />
           </div>
         </div>
         <p className="text-text-dark-green text-sm font-medium whitespace-pre-line">

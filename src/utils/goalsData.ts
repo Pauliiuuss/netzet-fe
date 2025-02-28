@@ -2,7 +2,7 @@ import { Goal } from './types'
 
 export const goalsData: Goal[] = [
   {
-    image: '/goal1.png',
+    image: '/goals/goal1.png',
     title: 'PROCRASTINATION SYMPTOMS:',
     points: [
       'Time management difficulties',
@@ -14,7 +14,7 @@ export const goalsData: Goal[] = [
     type: 'negative',
   },
   {
-    image: '/goal2.png',
+    image: '/goals/goal2.png',
     title: 'YOUR GOAL:',
     points: [
       'Able to focus, minimal distraction',
