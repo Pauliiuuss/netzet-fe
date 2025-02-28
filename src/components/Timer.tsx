@@ -25,8 +25,10 @@ export const Timer = ({ expirationDate }: { expirationDate: Date }) => {
     <div className="flex items-center justify-center gap-1">
       {days > 0 && (
         <>
-          <div className="bg-light-green flex h-12 w-12 flex-col items-center justify-center rounded-[4px]">
-            <p className="text-xl leading-none font-bold">{days}</p>
+          <div className="bg-light-green flex h-10 w-10 flex-col items-center justify-center rounded-[4px] lg:h-12 lg:w-12">
+            <p className="text-base leading-none font-bold lg:text-xl">
+              {days}
+            </p>
             <p className="text-xs leading-none">{'d'}</p>
           </div>
           <p>{':'}</p>
@@ -34,23 +36,29 @@ export const Timer = ({ expirationDate }: { expirationDate: Date }) => {
       )}
       {hours > 0 && (
         <>
-          <div className="bg-light-green flex h-12 w-12 flex-col items-center justify-center rounded-[4px]">
-            <p className="text-xl leading-none font-bold">{hours}</p>
+          <div className="bg-light-green flex h-10 w-10 flex-col items-center justify-center rounded-[4px] lg:h-12 lg:w-12">
+            <p className="text-base leading-none font-bold lg:text-xl">
+              {hours}
+            </p>
             <p className="text-xs leading-none">{'hr'}</p>
           </div>
           <p>{':'}</p>
         </>
       )}
       <>
-        <div className="bg-light-green flex h-12 w-12 flex-col items-center justify-center rounded-[4px]">
-          <p className="text-xl leading-none font-bold">{minutes}</p>
+        <div className="bg-light-green flex h-10 w-10 flex-col items-center justify-center rounded-[4px] lg:h-12 lg:w-12">
+          <p className="text-base leading-none font-bold lg:text-xl">
+            {minutes}
+          </p>
           <p className="text-xs leading-none">{'min'}</p>
         </div>
         <p>{':'}</p>
       </>
       <>
-        <div className="bg-light-green flex h-12 w-12 flex-col items-center justify-center rounded-[4px]">
-          <p className="text-xl leading-none font-bold">{seconds}</p>
+        <div className="bg-light-green flex h-10 w-10 flex-col items-center justify-center rounded-[4px] lg:h-12 lg:w-12">
+          <p className="text-base leading-none font-bold lg:text-xl">
+            {seconds}
+          </p>
           <p className="text-xs leading-none">{'sec'}</p>
         </div>
       </>

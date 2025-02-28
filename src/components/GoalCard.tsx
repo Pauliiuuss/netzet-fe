@@ -15,7 +15,7 @@ export const GoalCard = ({ data }: { data: Goal }) => {
   return (
     <div className="from-pink-default via-purple-default to-blue-default relative inline-block rounded-3xl bg-gradient-to-r p-[2px]">
       <div className="from-pink-default via-purple-default to-blue-default absolute -inset-2 rounded-3xl bg-gradient-to-r opacity-75 blur" />
-      <div className="bg-pure-white relative flex w-[342px] flex-col justify-evenly rounded-3xl lg:w-[410px]">
+      <div className="bg-pure-white relative flex max-w-[342px] flex-col justify-evenly rounded-3xl lg:max-w-[410px]">
         <Image
           src={data.image}
           alt={data.title}

@@ -20,3 +20,15 @@ export type Goal = {
   points: string[]
   type: 'positive' | 'negative'
 }
+
+type Segments = {
+  text: string
+  highlighted: boolean
+}
+
+export type Plan = {
+  id: string
+  icon: string
+  wide: boolean
+  textSegments: Segments[]
+}

@@ -22,7 +22,7 @@ export const SummaryCard = ({ data }: { data: Summary }) => {
       )}
     >
       <div className="flex flex-col gap-2">
-        <p className="text-2xl font-bold">{data.title}</p>
+        <p className="text-xl font-bold lg:text-2xl">{data.title}</p>
         <p className={classNames('text-xl font-extrabold', stageColor)}>
           {data.stage.toUpperCase()}
         </p>

@@ -24,7 +24,7 @@ export const Pricing = () => {
         height={0}
         className="-mb-[1px] w-full"
       />
-      <div className="bg-pricing-green text-pure-white flex flex-col items-center justify-center py-10">
+      <div className="bg-pricing-green text-pure-white flex flex-col items-center justify-center px-6 py-10 lg:px-0">
         <p className="text-4xl font-bold">{'Choose your plan'}</p>
         <div className="my-14 flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:items-end">
           {pricingData.map((data) => {
