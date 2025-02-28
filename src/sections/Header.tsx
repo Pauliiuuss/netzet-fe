@@ -6,7 +6,7 @@ export const Header = () => {
       <div className="bg-header-green flex w-full items-center justify-center">
         <Image
           alt="logo"
-          src={'/logo.svg'}
+          src={'/header/logo.svg'}
           height={52}
           width={110}
           className="py-4 lg:pt-10"

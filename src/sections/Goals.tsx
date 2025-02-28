@@ -9,7 +9,7 @@ export const Goals = () => {
     <section className="my-[60px] flex flex-col items-center justify-center gap-6 px-7 lg:my-24 lg:flex-row lg:gap-9 lg:px-0">
       <GoalCard data={goalsData[0]} />
       <Image
-        src={'/divider.svg'}
+        src={'/goals/divider.svg'}
         alt="divider"
         width={0}
         height={0}

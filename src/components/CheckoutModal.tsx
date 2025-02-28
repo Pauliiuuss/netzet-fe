@@ -26,7 +26,12 @@ export const CheckoutModal = ({
             className="self-end text-gray-600 hover:text-gray-900"
             onClick={onClose}
           >
-            <Image src={'/close.svg'} alt="close" width={20} height={20} />
+            <Image
+              src={'/icons/close.svg'}
+              alt="close"
+              width={20}
+              height={20}
+            />
           </button>
           {/* Order Summary */}
           <div className="text-text-dark-green flex w-full flex-col gap-4">

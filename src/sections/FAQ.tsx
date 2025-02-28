@@ -18,7 +18,7 @@ export const FAQ = () => {
         <p className="text-pure-white text-[40px] font-bold">
           {'People often ask'}
         </p>
-        <div className="flex flex-col gap-2">
+        <div className="flex w-full flex-col gap-2 lg:w-auto">
           {FAQData.map((faq) => {
             return <FAQItem data={faq} key={faq.id} />
           })}

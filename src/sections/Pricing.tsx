@@ -23,7 +23,7 @@ export const Pricing = () => {
   return (
     <section id="pricing">
       <Image
-        src="/price-wave-top.svg"
+        src="/pricing/price-wave-top.svg"
         alt="wave-top"
         width={0}
         height={0}
@@ -64,7 +64,7 @@ export const Pricing = () => {
         <div className="mt-8 flex w-full max-w-[672px] flex-col items-center justify-between gap-6 lg:flex-row lg:gap-0">
           <div className="flex max-w-[371px] flex-row items-center">
             <Image
-              src={'/guarantee.svg'}
+              src={'/pricing/guarantee.svg'}
               alt="guarantee"
               width={52}
               height={52}
@@ -79,7 +79,7 @@ export const Pricing = () => {
             </div>
           </div>
           <Image
-            src={'/payment-methods.svg'}
+            src={'/pricing/payment-methods.svg'}
             alt="paymentMethods"
             width={261}
             height={38}
@@ -87,7 +87,7 @@ export const Pricing = () => {
         </div>
       </div>
       <Image
-        src="/price-wave-bottom.svg"
+        src="/pricing/price-wave-bottom.svg"
         alt="wave-bottom"
         width={0}
         height={0}

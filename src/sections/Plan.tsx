@@ -12,7 +12,7 @@ export const Plan = () => {
       </p>
       <div className="flex max-w-[964] flex-col-reverse items-center gap-[93px] lg:flex-row lg:items-stretch">
         <Image
-          src={'/brain.svg'}
+          src={'/plan/brain.svg'}
           alt="brain"
           width={0}
           height={0}
