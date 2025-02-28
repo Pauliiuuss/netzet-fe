@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Statistics = () => {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <Image
         src="/stats.png"
         alt="stats"
@@ -17,6 +17,6 @@ export const Statistics = () => {
         height={1000}
         className="block h-auto w-full lg:hidden"
       />
-    </div>
+    </section>
   )
 }

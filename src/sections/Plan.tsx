@@ -6,7 +6,7 @@ import { planData } from '@/utils/planData'
 
 export const Plan = () => {
   return (
-    <div className="mt-[60px] mb-[120px] flex flex-col items-center justify-center gap-[60px] lg:-mt-[10%] lg:gap-20">
+    <section className="mt-[60px] mb-[120px] flex flex-col items-center justify-center gap-[60px] lg:-mt-[10%] lg:gap-20">
       <p className="text-text-dark-green max-w-[500px] text-center text-[32px] leading-none font-bold lg:text-[40px]">
         {'Your Procrastination plan will help you:'}
       </p>
@@ -18,6 +18,6 @@ export const Plan = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
